@@ -1,7 +1,9 @@
 # Employee-Tracker-Fun
+As part of their work, developers often need to design user-friendly interfaces for individuals without coding skills to access and manipulate data stored in databases. These interfaces are referred to as content management systems (CMS). Your task for this week is to construct a command-line application from scratch utilizing Node.js, Inquirer, and MySQL to manage an employee database for a company.
+
+To meet the requirements of this Challenge, it is important to download and employ version 8.2.4 of the Inquirer package. To do this, run the following command in your project directory: npm i inquirer@8.2.4.
 
 # User Story
-
 
 AS A business owner
 
