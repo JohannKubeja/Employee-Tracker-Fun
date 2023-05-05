@@ -63,7 +63,7 @@ const viewDept = () => {
 }
 
 const viewRoles = () => {
-    db.query("SELECT * FROM Roles", (err, results) => {
+    db.query("SELECT * FROM Role", (err, results) => {
         err ? console.error(err) : console.table(results);
         init();
     })
@@ -128,7 +128,7 @@ const addRoles = () => {
      
              
          ]).then(answers => {
-             db.promise().query("INSERT INTO Roles set ?", answers).then(data => {
+             db.promise().query("INSERT INTO Role set ?", answers).then(data => {
                  console.log("added role");
                  init()
              })
@@ -148,7 +148,7 @@ const addEmployee = () => {
     let managerNames = [];
 
     function prepareRoleChoices(nextFunctionCall, nextNextFunctionCall) {
-        db.query(`SELECT id,title FROM Roles`, (err, results) => {
+        db.query(`SELECT id,title FROM Role`, (err, results) => {
             if (err) {
                 console.log(err);
             } else {
@@ -236,7 +236,7 @@ const addEmployee = () => {
 const updateEmployee = () => {
 
     db.query(
-        `SELECT * FROM roles`,
+        `SELECT * FROM role`,
         function (err, res) {
             if (err) throw err;
             const roles = res;
@@ -255,7 +255,7 @@ const updateEmployee = () => {
                     name: "roles"
                 }
             ]).then(answers => {
-                db.query(`UPDATE employee SET roles_id = ? WHERE id = ?`, [answers.role_id, answers.roles], (err, results) => {
+                db.query(`UPDATE employee SET role_id = ? WHERE id = ?`, [answers.role_id, answers.roles], (err, results) => {
                     if (err) {
                         console.log(err);
                     } else {
