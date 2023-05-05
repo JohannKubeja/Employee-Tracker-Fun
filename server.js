@@ -217,12 +217,12 @@ const addEmployee = () => {
             // console.log({selectedRoleName,selectedManagerName});
             // console.log({selectedRoleId,selectedManagerId});
 
-            db.query(`INSERT INTO Employee(first_name, last_name, role_id, manager_id)
+            db.query(`INSERT INTO employee(first_name, last_name, role_id, manager_id)
             VALUES(?, ?, ?, ?)`, [answers.firstName, answers.lastName, selectedRoleId, selectedManagerId], (err, results) => {
                 if (err) {
                     console.log(err);
                 } else {
-                    db.query(`SELECT * FROM Employee`, (err, results) => {
+                    db.query(`SELECT * FROM employee`, (err, results) => {
                         err ? console.error(err) : console.table(results);
         
                         init();
