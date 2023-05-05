@@ -48,3 +48,10 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 WHEN I choose to update an employee role
 
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database
+
+
+# Walk Through Video
+
+https://user-images.githubusercontent.com/116978562/236370276-ea87b922-4840-4f77-9861-23b60bd6b0e5.mp4
+
+
